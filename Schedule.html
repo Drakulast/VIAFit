@@ -16,7 +16,7 @@
 
 <body>
     <div class="container-fluid p-0 p-md-5">
-        <!-- navigation -->
+        <!-- NAVIGATION -->
         <nav class="navbar navbar-expand-lg navbar-dark blue-bg fixed-top">
             <a class="navbar-brand" href="index.html">
                 <img src="images/logo.png" class="img-fluid w-75" alt="lofo of viafit center">
@@ -45,6 +45,7 @@
             </div>
         </nav>
 
+        <!-- BANNER -->
         <div class="jumbotron mt-5" id="scheduleHeader">
             <div class="bg-overlay d-flex justify-content-center align-items-center">
                 <div class="container  text-white">
@@ -53,24 +54,34 @@
             </div>
         </div>
 
-        <div class="row mx-0 bg-opacity py-4 align-items-center d-none d-md-block">
+        <!-------------------- SCHEDULE PAGE made by Maria Asenova -------------------->
+        <!-- getbootstrap.com and www.w3schools.com have been used as a source of information to code this page -->
+
+        <!-- row with inspirational heading displayed on medium breakpoint and above -->
+        <!-- this is controlled by the property display with value of none and overwritten 
+        to block for medium breakpoint and above-->
+        <div class="row mx-0 bg-opacity py-4 d-none d-md-block">
             <div class="col-12 text-center">
-                <h3 class="text-white">It's more than a workout <span>- it's an experience</span></h3>
+                <h3 class="text-white">It's more than a workout - it's an experience</h3>
                 <p class="text-uppercase font-weight-bold small orangeText mb-0">When you train with us</p>
             </div>
         </div>
-
-        <!-- Schedule table 
-         the responsive class from Bootstrap has been used
-         to make the table responsive
+        <!-- the table-responsive class from Bootstrap has been used
+         as a wrapper for the table to make it responsive
         -->
         <div class="table-responsive">
             <table class="table table-bordered" id="schedule">
                 <!-- table header -->
                 <thead>
-                    <th colspan="5" class="text-center blue-bg text-white border-0 py-md-4">
-                        <p class="m-0">April 2020</p>
-                    </th>
+                    <!-- row with heading for the month and year -->
+                    <tr>
+                        <th colspan="5" class="text-center blue-bg text-white border-0 py-md-4">
+                            <p class="m-0">April 2020</p>
+                        </th>
+                    </tr>
+                    <!-- row with headings for days of week -->
+                    <!-- a span element with property display none is used to remove some
+                    letters on mobile for legibily due to screen size constraints  -->
                     <tr class="text-center bg-gray">
                         <th scope="col">Mon<span class="d-none d-md-inline">day</span></th>
                         <th scope="col">Tue<span class="d-none d-md-inline">sday</span></th>
@@ -81,11 +92,19 @@
                 </thead>
                 <!-- table body -->
                 <tbody>
+                    <!-- table row for displaying each week of the month, weekdays only -->
                     <tr>
+                        <!-- table data for displaying the class info for each day, listed by using the p element -->
+                        <!-- the td element is styled with padding bottom starting from the medium breakpoint
+                        and above, padding top is removed on all breakpoints -->
                         <td class="pb-md-4 pt-0">
+                            <!-- display inline on the first p is used to align the date in the top left corner
+                            of the table cell without taking more space than its content -->
                             <p class="text-muted d-inline small">6</p>
                             <p class="text-center mb-0">08:00</p>
                             <p class="text-center mb-0 orangeText font-weight-bold">Zumba</p>
+                            <!-- the last paragraph informing who teaches the class is not displayed on mobile to make
+                        more space for more important information such as the name of the class and time -->
                             <p class="text-center mb-0 d-none d-md-block">With Cezary</p>
                         </td>
                         <td class="pb-md-4 pt-0">
@@ -113,6 +132,7 @@
                             <p class="text-center mb-0 d-none d-md-block">With Cezary</p>
                         </td>
                     </tr>
+                    <!-- table row -->
                     <tr>
                         <td class="pb-md-4 pt-0">
                             <p class="text-muted d-inline small">13</p>
@@ -145,6 +165,7 @@
                             <p class="text-center mb-0 d-none d-md-block">With Ionut</p>
                         </td>
                     </tr>
+                    <!-- table row -->
                     <tr>
                         <td class="pb-md-4 pt-0">
                             <p class="text-muted d-inline small">20</p>
@@ -177,6 +198,7 @@
                             <p class="text-center mb-0 d-none d-md-block">With Cezary</p>
                         </td>
                     </tr>
+                    <!-- table row -->
                     <tr>
                         <td class="pb-md-4 pt-0">
                             <p class="text-muted d-inline small">27</p>
@@ -209,33 +231,40 @@
                 </tbody>
             </table>
         </div>
+        <!-- end of responsive table -->
 
-        <!-- new customers section -->
-        <div class="row text-left my-5 blueText justify-content-around">
-            <div class="col-12 col-lg-6 p-3 text-center text-lg-left">
+        <!-- NEW CUSTOMERS SECTION -->
+        <!-- row with 12 col layout for mobile and medium screens, 6 by 6 col layout for large screens and 5 by 5 col for
+        extra large screens. The justify-content utility is used to change the alignment of the columns on the different
+        breakpoints, justify-content-center for small and extra large screens, and justify-content-between for medium and large screens -->
+        <div class="row text-left my-5 blueText justify-content-center justify-content-md-between justify-content-xl-center">
+            <div class="col-12 col-lg-6 col-xl-5 p-3 text-center text-lg-left">
                 <h2>Never taken a class before?</h2>
                 <p class="orangeText text-uppercase font-weight-bold small mb-4">How to choose the right class</p>
                 <p class="text-muted px-4 px-md-0">A lot of people feel confused when chosing their first class. VIAfit offers many different classes, therefore might be difficult to choose among them. We know how overwhelming this can be but if you make a small research beforehand it can also be easy. We are always happy to help and advice our customers.</p>
             </div>
-            <div class="col-6 align-items-center">
-                <img src="images/trainer.svg" class="img-fluid d-none d-lg-block w-50 m-auto" alt="personal trainer">
+            <div class="col-lg-6 col-xl-5 d-flex align-items-center">
+                <!-- img element with display none for small and medium screens and display block for large and extra large screens taking 6 col for large and 5 for extra large, img-fluid is used to make the img reponsive -->
+                <img src="images/trainer.svg" class="img-fluid d-none d-lg-block w-75 mx-auto" alt="personal trainer">
             </div>
         </div>
-        <!-- steps section for new customers -->
-        <div class="row justify-content-center justify-content-md-between">
-            <div class="col-10 col-md-3 bg-gray-light py-5 px-4 blueText border-card">
+        <!-- STEPS SECTION FOR NEW CUSTOMERS -->
+        <!-- row with 3 columns aligned in the center for medium screen and above -->
+        <div class="row justify-content-center">
+            <!-- columns stacked on top of each on mobile, each col takes space for 3 col on medium screens and 2 on extra large screens -->
+            <div class="col-10 col-md-3 col-xl-2 bg-gray-light py-5 px-4 blueText border-card mr-md-5">
                 <h2 class="mb-0 text-center">1</h2>
                 <hr class="d-block mx-auto w-50 bg-secondary mt-2">
                 <h5 class="text-center my-3">Overview</h5>
                 <p class="text-center text-muted small">Take a look at the classes offered in the gym, read the descriptions and contact us if you have questions</p>
             </div>
-            <div class="col-10 col-md-3 bg-gray-light py-5 px-4 blueText border-card">
+            <div class="col-10 col-md-3 col-xl-2 bg-gray-light py-5 px-4 blueText border-card mr-md-5">
                 <h2 class="mb-0 text-center">2</h2>
                 <hr class="d-block mx-auto w-50 bg-secondary mt-2">
                 <h5 class="text-center my-3">Feedback</h5>
                 <p class="text-center text-muted small">Get in touch with an instructor teaching the particular class for further information and guidelince</p>
             </div>
-            <div class="col-10 col-md-3 bg-gray-light py-5 px-4 blueText border-card">
+            <div class="col-10 col-md-3 col-xl-2 bg-gray-light py-5 px-4 blueText border-card">
                 <h2 class="mb-0 text-center">3</h2>
                 <hr class="d-block mx-auto w-50 bg-secondary mt-2">
                 <h5 class="text-center my-3">Sign up</h5>
@@ -243,31 +272,116 @@
             </div>
         </div>
 
-        <!-- contact us section linking to about us form
-        the card component from getbootstrap.com has
-        been used for this section
-        -->
-        <div class="row mt-5">
-            <div class="col-12 col-md-6">
-                <img src="images/question.svg" class="img-fluid d-none d-lg-block w-75 m-auto" alt="question mark">
+        <!-- CONTACT SECTION -->
+        <!-- row with 12 col layout for small and medium screens, 6 by 6 col layout for large screens and 5 by 5 for extra large.
+        The justify-content utility is used to change the alignment of the columns on the different breakpoints -->
+        <div class="row text-left my-5 blueText justify-content-center justify-content-md-between justify-content-xl-center">
+            <!-- col container displayed as flex with align-items-center to aling the img vertically in the center on large screens and above. The img is made resposive with img-fluid, given width of 75%, and displayed as block with margin auto left and right for horizontal alignment -->
+            <div class="col-lg-6 col-xl-5 d-flex align-items-center">
+                <img src="images/question.svg" class="img-fluid d-none d-lg-block w-75 mx-auto " alt="personal trainer">
             </div>
-            <div class="col-12 col-lg-6 px-3 text-center text-lg-left justify-content-center">
-                <div class="card border-0 align-items-center">
-                    <div class="card-body">
-                        <h2 class="mb-lg-4">Do you have any questions?</h2>
-                        <p class="card-text text-muted px-4 px-md-0">We are always happy to hear from our clients. If you have any question or you would like to give us feedback - do not hesitate to contact us</p>
-                        <a href="About.html#contact" class="btn bg-orange d-block d-md-inline text-white">Contact us</a>
+            <!-- 12 col layout for small and medium, 6 for large (making space for the image to be displayed) and 5 for extra large screens -->
+            <div class="col-12 col-lg-6 col-xl-5 p-3 text-center text-lg-left">
+                <h2>Do you have any questions?</h2>
+                <p class="orangeText text-uppercase font-weight-bold small mb-4">get in touch with us</p>
+                <p class="text-muted px-4 px-md-0">We are always happy to hear from our clients. If you have any question or you would like to give us feedback - do not hesitate to contact us. If you have any recommendations regarding classes or the schedule, we are always open for new suggestions and improvements.</p>
+                <!-- anchor element styled as button linking to the contact form on the about page. The anchor is displayed as block level element on small screens and as inline element on medium screens and above. -->
+                <a href="About.html#contact" class="btn bg-orange btn-orange d-block d-md-inline text-white px-4 py-2 mx-5 mx-md-0">Contact us</a>
+            </div>
+        </div>
+
+        <!-- FAQ, the collapse and card components from
+        getbootstrap.com are used and modified in this section -->
+        <!-- row heading -->
+        <div class="row mt-5 justify-content-center">
+            <div class="col-12 col-xl-10 blue-bg py-4">
+                <h2 class="text-center text-white mb-0">FAQ</h2>
+            </div>
+        </div>
+        <!-- row aligning its content in the center -->
+        <div class="row justify-content-center">
+            <!-- 12 column layout on small, medium and large screens, 10 col layout for extra large screens-->
+            <div class="col-12 col-xl-10 px-0">
+                <!-- wrapper, parent container for the cards with questions -->
+                <div class="accordion" id="accordionFaq">
+                    <!-- card comoponent without border -->
+                    <div class="card border-0">
+                        <!-- card header with p for question -->
+                        <div class="card-header cursor-pointer" id="headingOne">
+                            <!-- the paragraph has the role of button, on click the card body is collapsed -->
+                            <p class="mb-0 py-2 text-center btn-link blueText font-weight-bold collapsed" role="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                Should I do cardio before the Crossfit class as warm up?
+                            </p>
+                        </div>
+                        <!-- card body for answer to question, collapsed when heading is on click -->
+                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionFaq">
+                            <div class="card-body">
+                                <!-- answer to question aligned in the center, displayed with 50% width horizontaly alligned -->
+                                <p class="w-50 mx-auto text-center">Every class starts with a warm up lesson where our instructors show how you are supposed to stretch and warm up before the class starts. If you have any injuries we strongly recommend talking to our instructors before the class, especially when attending the crossfit class. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card comoponent -->
+                    <div class="card border-0">
+                        <div class="card-header cursor-pointer" id="headingTwo">
+                            <p class="mb-0 py-2 text-center btn-link blueText font-weight-bold collapsed" role="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                How often should I go to classes?
+                            </p>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionFaq">
+                            <div class="card-body">
+                                <p class="w-50 mx-auto text-center">That very much depends on your personal goals. Our schedule is created in a way to provide customers with variety of classes every week. Our instructors recommend attending classes at least once a week.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card comoponent -->
+                    <div class="card border-0">
+                        <div class="card-header cursor-pointer" id="headingThree">
+                            <p class="mb-0 py-2 text-center btn-link blueText font-weight-bold collapsed" role="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Can I attend a class as a try out before signing up?
+                            </p>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionFaq">
+                            <div class="card-body">
+                                <p class="w-50 mx-auto text-center">It is possible to attend a class as a try out but the attendace of the class is paid. Therefore, we strongly recommend getting in touch with our instructors if you are in doubt which class you want to take.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card comoponent -->
+                    <div class="card border-0">
+                        <div class="card-header cursor-pointer" id="headingFour">
+                            <p class="mb-0 py-2 text-center btn-link blueText font-weight-bold collapsed" role="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Can I cancel my attendance of a class? If so when should I cancel?
+                            </p>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionFaq">
+                            <div class="card-body">
+                                <p class="w-50 mx-auto text-center">Every class has a maximum number of people who can attend. In order to make sure there is a place for everyone who wants to attend we recomend our customers to cancel their attendance at least 48 hours before the begining of the class. In that way we can give the place to someone else who wants to attend the class.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <!-- end of row for FAQ -->
+
+        <!-- LINK TO INSTRUCTORS PAGE -->
+        <div class="row justify-content-center mt-5">
+            <!-- 12 column layour for small and medium screens, 6 column layout for large screens and above -->
+            <div class="col-12 col-lg-6 p-3 text-center text-center">
+                <h2>Contact our instructors</h2>
+                <p class="orangeText text-uppercase font-weight-bold small mb-4">get information about classes</p>
+                <p class="text-muted px-4 px-md-0">A lot of people feel confused when chosing their first class. VIAfit offers many different classes, therefore might be difficult to choose among them. We know how overwhelming this can be but if you make a small research beforehand it can also be easy. We are always happy to help and advice our customers.</p>
+                <a href="Instructors.html" class="btn bg-orange btn-orange d-block d-md-inline text-white px-4 py-2 mx-5 mx-md-0">Instructors</a>
             </div>
         </div>
     </div>
 
 
 
-    <!-- footer -->
+    <!-- FOOTER -->
     <div class="container-fluid blue-bg text-white">
-        <!-- close up section -->
+        <!-- CLOSE SECTION for schedule page by Maria -->
         <div class="row text-center mt-5 p-5 bg-gradient">
             <div class="col-12">
                 <h2 class="text-uppercase">Stay active, stay fit</h2>
@@ -304,15 +418,15 @@
                 <hr class="bg-orange mb-4 mt-0 d-inline-block mx-auto w-25">
                 <p class="mb-0">Weekdays</p>
                 <p class="small">05:30 - 22:00</p>
-                <p class="mb-0">Weekdays</p>
-                <p class="small">05:30 - 22:00</p>
+                <p class="mb-0">Weekend</p>
+                <p class="small">07:00 - 22:00</p>
             </div>
 
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
 
                 <h6 class="text-uppercase font-weight-bold">Contact</h6>
                 <hr class="bg-orange mb-4 mt-0 d-inline-block mx-auto w-25">
-                <p><i class="fas fa-home mr-3"></i>Kollegievænget 26, Horses</p>
+                <p><i class="fas fa-home mr-3"></i>Kollegievænget 26, Horsens</p>
                 <a class="text-white" href="mailto:viafit@gmail.com">
                     <i class="fas fa-envelope mr-3 mb-4"></i>viafit@gmail.com</a>
                 <p><i class="fas fa-phone mr-3"></i> + 45 50 17 86 65</p>
