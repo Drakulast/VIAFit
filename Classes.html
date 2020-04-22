@@ -15,8 +15,11 @@
 </head>
 
 <body>
-    <!-- Navigation bar -->
     <div class="container-fluid p-0 p-md-5">
+        <!--NAVIGATION BAR (Group Work)-->
+        <!--The navigation consists of logo, surrounded by an anchor element aligned 
+            to the left on all breakpoints, and an ul element aligned to the right with all the anchors redirecting to specific pages-->
+        <!--On small screens the navigation items are hidden under burger menu icon, displayed on-click -->
         <nav class="navbar navbar-expand-lg navbar-dark blue-bg fixed-top">
             <!-- Logo with home page anchor-->
             <a class="navbar-brand" href="index.html"> <img src="images/logo.png" class="img-fluid w-75" alt="logo"> </a>
@@ -36,11 +39,10 @@
         <div class="jumbotron mt-5" id="classesHeader">
             <div class="bg-overlay d-flex justify-content-center align-items-center">
                 <div class="container text-white">
-                    <h1 class="display-3 font-weight-bold text-center"><span class="orangeText">Our</span> Classes </h1>
-                </div>
+                    <h1 class="display-3 font-weight-bold text-center"><span class="orangeText">Our</span> Classes </h1> </div>
             </div>
         </div>
-        <!-------------------- SCHEDULE PAGE made by Cezary Korenczuk -------------------->
+        <!-- SCHEDULE PAGE made by Cezary Korenczuk -->
         <!-- Introduction to classes -->
         <div class="container-fluid">
             <div class="row my-3">
@@ -48,6 +50,9 @@
                     <br> We love to let our trainers share their creative style along with their deep knowledge to create physically challenging classes.</div>
             </div>
             <!-- Desctription and photo 1 -->
+            <!-- Each row has a twelve column layout on all breakpoints except extra large, where the layout is breaking into six by six column -->
+            <!-- On extra large screen the order of the content is controlled by order last and first -->
+            <!-- The image fluid class is used to ensure responsiveness on all breakpoints-->
             <div class="row my-4">
                 <div class="col-lg-12 col-xl-6 text-center p-4">
                     <h3>Yoga</h3>
@@ -108,75 +113,118 @@
                 </div>
                 <div class="col-lg-12 col-xl-6 order-xl-last order-first text-center"><img class="rounded img-fluid" src="images/stretching_small.jpg" alt="Stretching" title="Stretching" id="stretchingImg"></div>
             </div>
-            <!-- Heading for supplements -->
+            <!-- Section linking to contact form -->
+            <div class="row my-5">
+                <div class="col-xl-12 text-center p-2 ">
+                    <h3 class="mb-4">You did not find your class? Help us with your ideas!</h3> <a href="About.html#contact" class="btn bg-orange btn-orange d-block d-md-inline text-white mt-5">I have a suggestion!</a> 
+                </div>
+            </div>
+            <!-- Section for Supplements -->
             <div class="row my-5">
                 <div class="col-xl-12 text-center p-2">
-                    <h3>Try our finest supplements to boost your performance!</h3>
-                </div>
+                    <h3>Try our finest supplements to boost your performance!</h3> </div>
                 <div class="col-xl-12 text-center p-2">
                     <p>All items are available at our gym*</p>
                 </div>
             </div>
             <!-- Three photos of supplements -->
-            <div class="row my-5 d-flex justify-content-between">
+            <!-- Animation done in CSS with zoom class -->
+            <!-- A row with three column layout on all breakpoints, the justify utility with value between is used to distribute the remaining space between the columns equally-->
+            <div class="row my-4 d-flex justify-content-between">
                 <div class="col-3 text-center zoom"><img src="images/supp1.png" alt="supp1" class="img-fluid">
-                    <p class="my-5 font-italic">100% Whey Pure Protein</p>
+                    <p class="my-4 font-italic">100% Whey Pure Protein</p>
                 </div>
                 <div class="col-3 text-center zoom"><img src="images/supp2.jpg" alt="supp1" class="img-fluid">
-                    <p class="my-5 font-italic">Platinum Hydro Whey</p>
+                    <p class="my-4 font-italic">Platinum Hydro Whey</p>
                 </div>
-                <div class="col-3 text-center zoom"><img src="images/supp3.jpg" alt="supp1" class="img-fluid">
-                    <p class="my-5 font-italic">Syntha 6</p>
+                <div class="col-3 mr-2 text-center zoom"><img src="images/supp3.jpg" alt="supp1" class="img-fluid">
+                    <p class="my-4 font-italic">Syntha 6</p>
                 </div>
             </div>
-            <!-- Suggestions with button -->
-            <div class="row my-5">
-                <div class="col-xl-12 text-center p-2">
-                    <h3>You did not find your class? Help us with your ideas!</h3>
-                    <a href="About.html#contact">
-                        <button type="button" class="btn bg-orange text-white my-3">I have a suggestion!</button>
-                    </a>
+            <!-- Section for Home Workout -->
+            <!-- A row with heading with twelve column layout on all breakpoints -->
+            <div class="row my-5 pt-5">
+                <div class="col-xl-12 text-center p-2 ">
+                    <h3 class="mb-2">Can't go outside today? <span class="orangeText">Don't give up</span> on your training!</h3>
+                    <h3>Try working out at home!</h3> </div>
+            </div>
+            <!-- 3 videos, the video media is taken from Bodybuilding's channel on youtube -->
+            <!-- Each row consists of heading and a container with embedded responsive which ensures the iframe element containing the video is reponsive on all breakpoints -->
+            <div class="row my-5 d-flex justify-content-between ">
+                <div class="col-xl-4 text-center">
+                    <h4 class="my-5">Cardio</h4>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/11WLF24-5iM" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-xl-4 text-center">
+                    <h4 class="my-5">Strength</h4>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/8MPb0O9xApA" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-xl-4 text-center">
+                    <h4 class="my-5">Flexibility</h4>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/03JKamVnbfs" allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- FOOTER (Groupwork) -->
+    <!-- The wrapper for the footer is container fluid so its displayed with 100% on all breakpoints-->
+    <!-- The footer consists of four rows -->
+    <!-- The first row is twelve column layout for displaying a motivation quote-->
+    <!-- The second row is twelve column layout on small devices, six by six on medium and five by seven on large and above-->
+    <!-- There is a paragraph aligned to the left on medium and above, and a container of social media icons aligned to the right on medium and above-->
+    <!-- The third row represents the main content for the footer with twelve column layout on small and three column layout on medium and above -->
+    <!-- The fourth row is twelve column layout on all breakpoints consisting of the copyright-->
     <div class="container-fluid blue-bg text-white">
-        <div class="row py-3">
-            <div class="col-md-6 col-lg-5 text-center text-md-left mb-3 mb-md-0 orangeText">
-                <p class="mb-0">Stay connected, follow us on social media!</p>
+        <div class="row text-center mt-5 p-5 bg-gradient">
+            <div class="col-12">
+                <h3 class="text-uppercase">Stay active, stay fit</h3>
+                <p class="small text-uppercase orangeText font-weight-bold">with viafit</p>
             </div>
-            <div class="col-md-6 col-lg-7 text-center text-md-right"> <i class="fab fa-facebook-f orangeText mr-5"> </i> <i class="fab fa-twitter orangeText mr-5"> </i> <i class="fab fa-instagram orangeText"></i> </div>
         </div>
-        <div class="row text-center text-md-left mt-5">
-            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
-                <h6 class="text-uppercase font-weight-bold">viafit horsens</h6>
-                <hr class="bg-orange mb-4 mt-0 d-inline-block mx-auto w-25">
-                <p class="mx-auto mx-md-0 small w-75 ">With a large selection of team training, experienced personal trainers and different classes, we ensure the right fit for you - whatever and whenever you want</p>
+        <div class="row py-3 mx-xl-5">
+            <div class="col-md-6 col-lg-5 text-center text-md-left mb-3 mb-md-0 orangeText">
+                <p class="mb-0">Stay connected<span class="d-none d-md-inline">, follow us on social media!</span></p>
             </div>
-            <div class="col-md-2 col-lg-3 col-xl-3 mx-auto mb-4">
-                <h6 class="text-uppercase font-weight-bold">About us</h6>
+            <div class="col-md-6 col-lg-7 text-center text-md-right"> <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f orangeText mr-5"></i></a> <a href="https://twitter.com/explore" target="_blank"><i class="fab fa-twitter orangeText mr-5"></i></a> <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram orangeText"></i></a> </div>
+        </div>
+        <div class="row text-center text-md-left mt-5 justify-content-center ml-xl-5">
+            <div class="col-md-3 col-lg-3 col-xl-3 justify-content-center mx-auto mb-4">
+                <h5 class="text-uppercase font-weight-bold">viafit horsens</h5>
+                <hr class="bg-orange mb-4 mt-0 d-inline-block mx-auto w-25">
+                <p class="mx-auto mx-md-0 small w-75 ">With a large selection of team training and experienced trainers, Viafit ensures the right fit for you</p>
+            </div>
+            <div class="col-md-3 col-lg-3 col-xl-3 justify-content-center mx-auto mb-4">
+                <h5 class="text-uppercase font-weight-bold">About us</h5>
                 <hr class="bg-orange mb-4 mt-0 d-inline-block mx-auto w-25">
                 <p><a class="text-white" href="Classes.html">Classes</a></p>
                 <p><a class="text-white" href="Schedule.html">Schedule</a></p>
-                <p><a class="text-white" href="Instructors.html">Intructors</a></p>
+                <p><a class="text-white" href="Instructors.html">Instructors</a></p>
             </div>
-            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
-                <h6 class="text-uppercase font-weight-bold">Opening hours</h6>
+            <div class="col-md-3 col-lg-3 col-xl-3 justify-content-center mx-auto mb-4">
+                <h5 class="text-uppercase font-weight-bold">Opening hours</h5>
                 <hr class="bg-orange mb-4 mt-0 d-inline-block mx-auto w-25">
-                <p class="mb-0">Weekdays</p>
+                <p class="mb-0 font-weight-bold">Weekdays</p>
                 <p class="small">05:30 - 22:00</p>
-                <p class="mb-0">Weekdays</p>
-                <p class="small">05:30 - 22:00</p>
+                <p class="mb-0 font-weight-bold">Weekend</p>
+                <p class="small">07:00 - 22:00</p>
             </div>
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                <h6 class="text-uppercase font-weight-bold">Contact</h6>
+            <div class="col-md-3 col-lg-3 col-xl-3 justify-content-center mx-auto mb-md-0 mb-4">
+                <h5 class="text-uppercase font-weight-bold">Contact</h5>
                 <hr class="bg-orange mb-4 mt-0 d-inline-block mx-auto w-25">
-                <p><i class="fas fa-home mr-3"></i>Kollegievænget 26, Horses</p>
+                <p><i class="fas fa-home mr-3"></i>Kollegievænget 26, Horsens</p>
                 <a class="text-white" href="mailto:viafit@gmail.com"> <i class="fas fa-envelope mr-3 mb-4"></i>viafit@gmail.com</a>
                 <p><i class="fas fa-phone mr-3"></i> + 45 50 17 86 65</p>
             </div>
         </div>
-        <div class="text-muted text-center py-3 small">&copy; 2020 Copyright: <a class="orangeText" href="index.html"> viafit.dk</a> </div>
+        <div class="row">
+            <div class="col-12 text-muted text-center py-3 small">&copy; 2020 Copyright: <a href="index.html" class="orangeText"> viafit.dk</a> </div>
+        </div>
     </div>
 </body>
 
